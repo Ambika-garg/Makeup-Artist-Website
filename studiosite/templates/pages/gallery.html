@@ -55,7 +55,7 @@
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="content"> 
+    <nav class="content">
       <!-- ################################################################################################ -->
       <div id="gallery">
         <figure>
@@ -207,24 +207,23 @@
 
 <!--        </div>-->
 <!--      </div>-->
-</section>
-      {{ pagi }}
+  </section>
+<!--      {{ pagi }}-->
       <!-- ################################################################################################ -->
       <!-- ################################################################################################ -->
-      <div class="pagination center">
-    <span class="step-links">
-        {% if pagi.has_previous %}
-        <a href="?page={{ pagi.previous_page_number }}" class="waves-effect waves-light btn btn-large">Previous</a>
-        {% endif %}
+    <nav class="pagination">
+        <ul>
+          {% if pagi.has_previous %}
+          <li><a href="?page={{ pagi.previous_page_number }}">Previous</a></li>
+          {% endif %}
 
-        {% if pagi.has_next %}
-        <a href="?page={{ pagi.next_page_number }}" class="waves-effect waves-light btn btn-large">Next</a>
-        {% endif %}
-    </span>
-  </div>
-
-      <!-- ################################################################################################ -->
-    </div>
+          {% if pagi.has_next %}
+          <li><a href="?page={{ pagi.next_page_number }}">Next</a></li>
+          {% endif %}
+        </ul>
+    </nav>
+    </nav>
+  </main>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>

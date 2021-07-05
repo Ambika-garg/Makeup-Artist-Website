@@ -3,7 +3,9 @@
 {% block content %}
 {% load static %}
 <link href="{% static '/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -159,7 +161,6 @@
             <p>10 Individual Classes + Practical Classes</p>
             <p>Extra Practice Sessions if required</p>
             <p>Price: Rs. 5000</p>
-              
           </div>
           <footer><a class="btn" href="courses">Read More</a></footer>
         </article>
@@ -218,76 +219,64 @@
 <!--    </section>-->
 <!--  </div>-->
 <!--</div>-->
-<div class="wrapper row3">
-
-<div class="sectiontitle">
-  <p class="heading underline font-x2">Our Client Reviews</p>
-</div>
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-
-      <img src="{% static 'demo/backgrounds/reveiws.jpg' %}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-          <section id="testimonials" class="hoc container clear">
+<div class="wrapper bgded overlay" style="background-image:url('{% static 'demo/backgrounds/reveiws.jpg' %}');">
+  <section id="testimonials !important;" class="hoc container clear"></section>  
+    <div class="sectiontitle">
+      <p class="heading underline font-x2">Our Client Reviews</p>
+    </div>
+    <div class="container">
+      <!-- Indicators -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+                  <article class="btmspace-0">
+                  <blockquote>Shikha Ma'am is amazing!!! I hands down think she is one of the best makeup artist I have seen. She is extremely professional and knowledgeable. Made my makeup and skin look flawless, received so many compliments!!</blockquote>
+                  <figure class="clear"><img src="{% static 'demo/backgrounds/Screenshot 2021-07-04 163041.png' %}" alt="">
+                    <figcaption>
+                      <h6 class="heading">Poonam</h6>
+                    </figcaption>
+                  </figure>
+                  </article>
+          </div>
+          <div class="item">
+                <article class="btmspace-0">
+                <blockquote>Absolutely loved her make-up! Great experience! Totally commendable! Yes! Yes! Yes!</blockquote>
+                <figure class="clear"><img src="{% static 'demo/backgrounds/Screenshot 2021-07-04 163206.png' %}" alt="">
+                  <figcaption>
+                    <h6 class="heading">Jaspreet</h6>
+                  </figcaption>
+                </figure>
+                </article>
+          </div>
+          <div class="item">
             <article class="btmspace-0">
-            <blockquote>Shikha Maam is amazing!!! I hands down think she is one of the best makeup artist I have seen. She is extremely professional and knowledgeable. Made my makeup and skin look flawless, received so many compliments!!</blockquote>
-            <figure class="clear"><img src="{% static 'demo/backgrounds/Screenshot 2021-07-04 163041.png' %}" alt="">
-              <figcaption>
-                <h6 class="heading">Poonam</h6>
-              </figcaption>
-            </figure>
-            </article>
-        </section>
+                <blockquote>Excellent! Easy to communicate with and very responsive. She was prompt and professional, but most importantly she is a a highly skilled makeup artist. Her work was truly flawless! Would recommend without hesitation!</blockquote>
+                <figure class="clear"><img src="{% static 'demo/backgrounds/Screenshot 2021-07-04 163233.png' %}" alt="">
+                  <figcaption>
+                    <h6 class="heading">Sonali</h6>
+                  </figcaption>
+                </figure>
+                </article>
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      </div>
+    </section>
     </div>
-    <div class="carousel-item">
-      <img src="{% static 'demo/backgrounds/reveiws.jpg' %}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <section id="testimonials" class="hoc container clear">
-          <article class="btmspace-0">
-          <blockquote>Absolutely loved her make-up! Great experience! Totally recommendable! Yes! Yes! Yes!</blockquote>
-          <figure class="clear"><img src="{% static 'demo/backgrounds/Screenshot 2021-07-04 163206.png' %}" alt="">
-            <figcaption>
-              <h6 class="heading">Jaspreet</h6>
-            </figcaption>
-          </figure>
-          </article>
-        </section>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'demo/backgrounds/reveiws.jpg' %}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <section id="testimonials" class="hoc container clear">
-          <article class="btmspace-0">
-          <blockquote>Excellent! Easy to communicate with and very responsive. She was prompt and professional, but most importantly she is a a highly skilled makeup artist. Her work was truly flawless! Would recommend without hesitation!</blockquote>
-          <figure class="clear"><img src="{% static 'demo/backgrounds/Screenshot 2021-07-04 163233.png' %}" alt="">
-            <figcaption>
-              <h6 class="heading">Sonali</h6>
-            </figcaption>
-          </figure>
-          </article>
-        </section>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
 
 
 {% endblock %}

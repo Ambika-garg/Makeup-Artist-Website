@@ -1,1 +1,0 @@
-web: gunicorn MAKEUPSTUDIOFINAL.wsgi --log-file -

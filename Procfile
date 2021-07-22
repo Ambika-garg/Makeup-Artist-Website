@@ -1,1 +1,1 @@
-web: gunicorn MAKEUPSTUDIOSITE.wsgi --log-file -
+web: gunicorn MakeupStudiofinal.wsgi --log-file -
